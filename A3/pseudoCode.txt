@@ -1,0 +1,142 @@
+fun setKeyLength(length){
+    
+    keyLength = getIntFromString(length)
+    if(keyLength>= 6 && keyLength <=12)
+        globKeylength = keyLength
+    else
+        output False
+}
+
+fun generate(keyLength){
+
+        while(treeset.size<totalKey)
+        for(i=0; i<keyLength;keyLength++)
+        builder.append
+        treeset.add(sb.toString)
+
+}
+    
+fun allKeys(){
+
+    for(key)
+    output key
+
+}
+
+fun add(key,value){
+    
+    if treset.contains(key) && !smartARdata.containsKey(key)
+        smartARdata.put(Key,value)
+    else
+        output False
+}
+
+
+fun remove(key){
+
+    if smartARdata.containsKey(key)
+			smartARdata.remove(key);
+			output Success
+		 else 
+			output False
+}
+
+fun getValues(key){
+
+    if smartARdata.containsKey(key)
+			output values
+		} else {
+			output False
+		}
+
+}
+
+fun nextKey(key){
+
+        nextKey = null;
+		keyFound = false;
+
+		if smartARdata.containsKey(key) 
+			for (Map.Entry<String, Car> value : smartARdata.entrySet()) 
+				if value.getKey().equals(key)
+					keyFound = true; // check if we have found entry or not
+					continue;
+				
+				if keyFound
+					nextKey = value.getKey();
+					break;
+				}
+			
+
+			if nextKey != null 
+				output nextKey
+            else 
+				output False
+			
+
+		 else 
+			output False
+		
+
+}
+
+fun prevKey(key){
+
+        prevKey = null;
+
+		if smartARdata.containsKey(key)
+
+			for (Map.Entry<String, Car> value : smartARdata.entrySet()) 
+
+				if value.getKey().equals(key)
+					break;
+				 else 
+					prevKey = value.getKey();
+				
+
+			
+			if (prevKey != null) 
+				output prevKey
+			 else 
+				output False
+			
+
+		 else 
+			output False
+}
+
+
+fun previousCar(key){
+
+    prevKey = null;
+		map tem;
+
+		if smartARdata.containsKey(key)
+
+			for (map value : smartARdata.entrySet()) 
+
+				if value.getKey().equals(key) 
+					break;
+				 else 
+					temp.put(value.getKey(), value.getValue());
+
+			if temp.size() > 0 
+
+				Iterator iterator;
+				while (iterator.hasPrevious()) {
+					map = iterator.previous();
+					output map
+				}
+
+			 else 
+				output False
+			
+		 else 
+			output False
+}
+
+
+
+
+
+

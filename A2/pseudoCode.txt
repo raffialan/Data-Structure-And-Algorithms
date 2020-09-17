@@ -1,0 +1,30 @@
+fun playgame(index){
+
+    element <- scoreArray[index]
+    if element <- 0 then
+        output True
+    else if element == previousElement then
+        output False
+    else 
+        
+        sum = index + element
+        if sum < scoreArray.length then
+				index = index + element
+				if index >= 0 && index < scoreArray.length then 
+					previousElement = element
+					playgame(index)
+				else 
+					output False
+				
+        else if index >= element then
+				index = index - element
+				if index >= 0 && index < scoreArray.length then
+					previousElement = element
+					playgame(index)
+				else
+					output False
+				
+        else 
+				output False
+end			
+}	
