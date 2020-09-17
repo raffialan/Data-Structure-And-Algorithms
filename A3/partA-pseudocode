@@ -1,0 +1,207 @@
+Part A- Pseudocode:
+
+Class KeyComparator =========>
+
+Input: T Comparable class of Type T
+
+state = "Min"
+
+Function toggle(){
+
+		if(state.equals("Min")){
+				state = "Max"
+		}else{
+				state = "Min"
+		}
+	}
+	
+
+Function getState(){
+		return state
+	}
+	
+Function compare(E first, E second){
+		if (state.equals("Max")){
+				return (first.compareTo(first))
+		}else{
+				return(-firstcompareTo(first));
+		}
+	}
+	
+	
+
+Class ADTQueue ==================>
+
+Input: K- key, V- Value
+Output:ADT Queue
+
+dynamicArray = DynamicArray < K,V >()
+keyComparator = KeyComparator < K >()
+
+
+function swapEntry(from,to)
+temp = heap.get(i)
+dynamicArray.set(i, heap.get(j))
+dynamicArray.set(j, temp)
+
+
+function top()
+	if dynamicArray.set.isEmpty() then
+		return null
+	else
+		return dynamicArray.set.get(0)
+
+
+function upheap(index)
+	while j > 0 do
+		parent = parent(index)
+		if compare(dynamicArray.get(index), dynamicArray.get(p)) ≤ 0 then
+				break
+		swap(index,parent)
+		index = parent
+		
+		
+function left(j)
+return 2 * index + 1
+
+
+	
+function downheap(index) {
+		while hasLeft(index) {
+		
+				indexChild = left(index)
+				
+				if hasRight(index) {
+					indexRight = right(index)
+					
+					if compare(dynamicArray.get(indexChild),dynamicArray.get(indexRight))<0 {
+					
+
+							indexChild = indexRight
+					}
+				}
+				
+				if compare(dynamicArray.get(indexChild), dynamicArray.get(index)) < 0 {
+					break
+				}
+				
+				swapEntry(index, indexChild)
+
+					index = indexChild
+				}
+		}		
+		
+function removeTop() {
+		if dynamicArray.isEmpty() {
+			return null
+		}
+		index = 0
+		swapEntry(index, dynamicArray.size() - 1)
+		entryremoved = dynamicArray.get(dynamicArray.size() - 1)
+		dynamicArray.remove(dynamicArray.size() - 1)
+		downheap(index)
+		return entryremoved
+}
+		
+
+function isEmpty() {
+		return (size() == 0);
+	}
+	
+	
+function insert(K key, V value) {
+			checkKeyisValidOrNot(key)
+			dynamicArray.append(Entry(key, value))
+			upheap(dynamicArray.size() - 1)
+			return entry
+		}
+		
+		
+function right(index) {
+		return var * index + var
+	}
+		
+
+function remove(entry) {
+		arrayEntry = validateEntry(entry)
+		index = arrayEntry.getIndex()
+			if index == dynamicArray.size() - 1
+					dynamicArray.remove(dynamicArray.size() - 1)
+			else {
+					swapEntry(index, dynamicArray.size() - 1)
+					dynamicArray.remove(dynamicArray.size() - 1)
+					downheap(index)
+			}
+
+			return arrayEntry;
+		}
+		
+		
+
+
+function hasLeft(index) {
+				return left(index) &lt; dynamicArray.size()
+		}
+		
+		
+		
+function size() {
+			return dynamicArray.size()
+		}
+		
+		
+		
+function toggle() {
+			keyComparator.toggle()
+			heapify()
+		}
+		
+		
+		
+function replaceKey(entry,key) {
+			arrayEntry = validateEntry(entry)
+			checkKeyisValidOrNot(key)
+			arrayEntry.setKey(key)
+			dynamicArray.get(arrayEntry.getIndex())).setKey(key)
+			downheap(arrayEntry.getIndex())
+			return arrayEntry.getKey()
+		}
+
+
+
+
+function heapify() {
+			for index from parent(size() − 1) to 0 do
+			downheap(index)
+		}
+		
+		
+		
+function replaceValue(entry,value){
+			arrayEntry = validateEntry(entry)
+			arrayEntry.setValue(value)
+			dynamicArray.get(arrayEntry.getIndex())).setValue(value)
+			return arrayEntry.getValue()
+		}
+
+
+
+function isparent(index) {
+			return (index - 1) / 2
+
+		}
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		

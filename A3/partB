@@ -1,0 +1,21 @@
+part B - 
+
+1) toggle() - In toggle’s time complexity is related to heapify() method and in Heap
+implementation, for tree nodes, highest level 1 leaf node will be ¼ so tree with n nodes
+will leaf nodes as ½
+Level log n -1 the root of the tree is log n. So complexity of toggle() is O(n).
+
+
+2) remove(e)
+It takes O(n) time to find the element you want to delete.
+After deleting we need to shift all element from the right of space to left.
+
+
+3) replaceKey (e, k)
+It takes O(n) time because after replacing Key in the array we need to do downheap
+So ideally it will take O(n) time.
+
+
+4) replaceValue (e, v)
+In replaceValued method first, we need to access element on the specific index and need
+to update specific element so time complexity will be O(1).
