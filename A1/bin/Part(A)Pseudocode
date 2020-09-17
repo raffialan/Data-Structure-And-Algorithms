@@ -1,0 +1,40 @@
+part (A): 
+
+	**	   Pseudocode (linear)
+	
+Algorithm LinearFib(n)
+Input: value of n for which we can find
+	   corresponding tetrannaci value
+Output: tetranacci value of linear version
+Start:
+for(i=0;i<number<i++)
+if (i<=2) then next <- 0
+else if (i==3) then next <- 1
+else (next = first + second + third + fourth
+	  first <- second
+	  second <- third
+	  third <- fourth
+	  fourth <- next)
+return next
+End
+
+
+
+	**	   Pseudocode (multiple/exponential)
+
+
+Algorithm ExponentialTetranacci(n)
+Input: value of n for which we want to find 
+	   corresponding tetranacci value  
+Output: tetranacci value of exponential run
+Start:
+if (n==0 || n==1 || n==2) then return 0
+if (n==3) then return 1
+else
+	return ExponentialTetranacci(n-1) + ExponentialTetranacci(n-2) +
+		   ExponentialTetranacci(n-3) + ExponentialTetranacci(n-4)
+			  
+End
+
+
+			

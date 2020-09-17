@@ -1,0 +1,14 @@
+Part(B):
+
+the exponential (recursive) algorithm has exponential time complexity O(4^n)
+where as the other implemented program has a linear time complexity O(n)
+The reason that the multiple version is of exponential complexity is because the algorithm 
+is running 4 times for each n value for example exponentialTetranacci(10) will call exponentialTetranacci(9),
+exponentialTetranacci(8), exponentialTetranacci(7),exponentialTetranacci(6) and exponentialTetranacci(9) will call 
+exponentialTetranacci(8,7,6,5) and so on ... 
+
+For the linear version, the algorithm iterates n times for example linearTetranacci(10) = linearTetranacci(9) + linearTetranacci(8)+
+linearTetranacci(7)+ linearTetranacci(6) +linearTetranacci(5) ... + linearTetranacci(0) 
+
+Therefore the exponential version is like a chain process so the linear version resolves the bottle neck
+procedure to the exponential version.
